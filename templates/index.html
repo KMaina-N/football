@@ -1,0 +1,43 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        Teams:
+        <table>
+            <thead>
+                <th>Team Name</th>
+                <th>Team City</th>
+                <th>Win</th>
+                <th>Action</th>
+                <th>Update</th>
+            </thead>
+            <tbody>
+                {% for team in football %}
+
+                <tr>
+                    <td>{{ team.team_name }}</td>
+                    <td>{{ team.team_city }}</td>
+                    <td>{{ team.win }}</td>
+                    <td>
+                        <a href="/delete_team/{{team.id}}">Delete</a>
+                    </td>
+                    <td>
+                        <a href="/edit/{{team.id}}">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
